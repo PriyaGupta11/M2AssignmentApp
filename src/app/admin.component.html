@@ -1,0 +1,53 @@
+<!-- <h5>this is admin component</h5> -->
+
+<!-- <div class="container parent-view">
+    	<div class="">
+			<h3>Admin Component</h3>
+			<input type="text" class="form-control" 
+    			value="{{ sampleData }}" 
+    			[(ngModel)]='sampleData'>
+    			<p>Data from child user component : <b>{{ sampleChildData }}</b></p>
+    		<hr>
+    		<div class="child-view">
+    			<user-comp [parentData]="sampleData" (childData)='handleEvent($event)'>
+				app-child-view 
+			</user-comp>
+			</div>
+		</div>
+    </div> -->
+	
+	
+	<div class="container" >
+			<div class="col-md-6">
+					<h3>Users from Admin Component</h3>  
+					
+								<table class="table table-responsive">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Email Id</th>
+										<th>Phone No</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let item of userRecord" >
+									<td>{{item.userName}}</td>
+									<td>{{item.emailId}}</td>
+									<td>{{item.phoneNumber}}</td>
+								</tr>
+								</tbody>
+								</table>
+				  </div>
+				  <div class="col-md-6">
+						<user-comp [result]=value (clicked)="onClicked($event)"></user-comp>
+						
+					</div>
+				</div>
+				
+
+  
+
+
+
+		
+  
