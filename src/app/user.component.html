@@ -1,44 +1,31 @@
-
-
-    
 <div class="row">  
-  <h3>{{result}} Search User</h3>  
+  <h3>Search User</h3>  
  <div class="input-group input-group-lg">  
-  <span class="input-group-addon glyphicon glyphicon-search" id="sizing-addon1"></span>  
-  <input #input1 type="text" class="form-control" placeholder="Search Product Name" aria-describedby="sizing-addon1">  
+  <span class="input-group-addon glyphicon glyphicon-search" ></span>  
+  <input #input1 type="text" class="form-control" placeholder="Search User Name">  
 </div>  
-<br>  
-
-<button (click)="onClick(input1.value)" type="button" class="btn btn-primary">Search</button>  
-</div>  
-
-
+    <br>  
+    <button (click)="onClick(input1.value)"  type="button" class="btn btn-primary">Search</button>  
+</div> 
 <div class="container" >
     <div class="col-md-6">
-            <h3>filtered Users </h3>  
-            
-                        <table class="table table-responsive">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email Id</th>
-                                <th>Phone No</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <!-- <tr *ngFor="let item of userRecord" >
-                            <td>{{item.userName}}</td>
-                            <td>{{item.emailId}}</td>
-                            <td>{{item.phoneNumber}}</td>
-                        </tr> -->
-                        </tbody>
-                        </table>
-              
-          </div>
-          <div class="col-md-6">
-                <!-- <user-comp [result]=value (clicked)="onClicked($event)"></user-comp> -->
-                
-            </div>
-        </div>
+        <h3>filtered Users </h3>  
+            <table class="table table-responsive">
+                <thead>
+                 <tr>
+                    <th>Name</th>
+                    <th>Email Id</th>
+                    <th>Phone No</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of resultAr" >
+                        <td>{{item.userName}}</td>
+                        <td>{{item.emailId}}</td>
+                        <td>{{item.phoneNumber}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
         
